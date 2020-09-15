@@ -1,0 +1,226 @@
+/* GLOBAL */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+}
+
+/* HEADER */
+header{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.header__above .header__phone {
+    border-right: 0.5px solid white;
+    font-weight: 800;
+    font-size: 0.9em;
+}
+
+.header__below .nav-item {
+    font-size: 1.1em;
+    letter-spacing: 3px;
+}
+
+.header__below .nav-item .nav-link{
+    color: white;
+    padding: 0.5em 1.5em;
+}
+
+.header__below .navbar-nav{
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.6);
+}
+
+
+.header__below .nav-item::after{
+    content:'';
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    display: block;
+    box-shadow: 0 0 20px 0 #fbbd61;
+    transition: all .5s ease-in-out;
+    
+}
+
+.header__below .active::after {
+    content:'';
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    display: block;
+    box-shadow: 0 0 20px 0 #fbbd61;
+    
+}
+
+.header__below .nav-item:hover::after{
+    width: 100%;
+}
+
+.header__below .nav-item .dropdown-menu {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    /* visibility: hidden; */
+    transition: all .25s ease-in-out;
+    transform: scale(1.1);
+    opacity: 0;
+    border: none;
+    border-radius: 0;
+    background-image: linear-gradient(to right,#fbbd61,#ec7532);
+}
+
+.header__below .dropdown:hover .dropdown-menu{
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+.header__below .dropdown{
+    position: relative;
+}
+
+.header__below .dropdown-menu a{
+    padding-left: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.header__below .dropdown-menu:hover{
+    filter: brightness(120%);
+}
+
+.navbar-toggler-icon{
+    color: red;
+}
+
+.navbar-toggler-icon i{
+    color: #fbbd61;
+    font-size: 1.5em;
+}
+
+/* CAROUSEL MOVIE */
+.carouselMovie{
+    position: relative;
+}
+
+.carousel-caption{
+    /* position: absolute; */
+    justify-content: flex-start;
+    left: 10%;
+    top: 35%;
+    /* transform: translateX(-50%); */
+    width: 60%;
+    
+}
+
+.carousel-caption h5{
+    color: #fbbd61;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+.carousel-caption h3{
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.carousel-caption p{
+    font-size: 1.2em;
+}
+
+.carousel-caption .rated{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+} 
+
+.carousel-caption button{
+    width: 200px;
+    height: 45px;
+    padding: 15px 40px;
+    margin-left: 10px;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    color: white;
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    border: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-caption button .button__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 111%;
+    height: 100%;
+    background: rgb(236, 117, 50);
+    transform: skewX(45deg) translateX(-104%);
+    transition: all .5s;
+}
+
+.carousel-caption button:hover .button__overlay{
+    transform: skewX(45deg) translateX(-5%);
+}
+
+
+.carousel-item img{
+    height: 95vh;
+    min-height: 95vh;
+}
+
+.carousel-caption .button__text{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0.9em;
+}
+
+.carousel-indicators{
+    justify-content: flex-start;
+    left: 11%;
+    bottom: 10%;
+    margin: 0 0;
+}
+
+.carousel-indicators li{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: 0 0.5em;
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1;
+    padding: 0;
+    background-clip: unset;
+    
+}
+
+.carousel-indicators li.active{
+    background-color: #fff;
+}
+
+.carousel__bg{
+    position: absolute;
+    background: linear-gradient(to bottom, transparent, #000);
+    opacity: 1;
+    width: 100%;
+    height: 95vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+

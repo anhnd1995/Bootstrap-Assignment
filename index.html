@@ -10,6 +10,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -17,14 +20,123 @@
 </head>
 <body>
     <header>
-        
-
-
-
-
-
+        <div class="container header__above text-right pt-3 text-white">
+            <i class="fas fa-phone-alt"></i>
+            <span class="header__phone px-3 mr-3">0330 123 4567</span>
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="header__below">
+            
+            <nav class="container navbar navbar-expand-lg nav-light py-0 text-center">
+                <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movieNavbar" aria-controls="movieNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                  </span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="movieNavbar">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link " href="#">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">WHAT'S ON</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SHORTCODES</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">NEWS</a>
+                        <ul class="dropdown-menu mt-0">
+                            <li><a href="#">NEWS SINGLE</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
     </header>
-    <section class="carouselMovie"></section>
+    <section class="carouselMovie">
+        <!-- data-ride="carousel" -->
+        <div id="carouselMovieCaptions" class="carousel slide carousel-fade" >
+            
+            <ol class="container carousel-indicators">
+              <li data-target="#carouselMovieCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselMovieCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselMovieCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="5000">
+                <img src="./img/hero-1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel__bg"></div>
+                <div class="container carousel-caption
+                p-0 text-left">
+                    <h5>ACTION, ADVENTURE, FANTASY</h5>
+                    <h3>End of the World: Part II</h3>
+                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum.</p>
+                    <span class="rated">PG</span>
+                    <button>
+                        <div class="button__overlay">   
+                        </div>
+                        <div class="button__text">
+                            <i class="fa fa-play pr-3"></i>
+                            <span>PLAY TRAILER</span> 
+                        </div>
+
+                    </button>
+                    
+                </div>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="./img/hero-2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel__bg"></div>
+                <div class="container carousel-caption
+                p-0 text-left">
+                    <h5>ACTION, ADVENTURE, FANTASY</h5>
+                    <h3>End of the World: Part II</h3>
+                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum.</p>
+                    <span class="rated">15</span>
+                    <button>
+                        <div class="button__overlay">   
+                        </div>
+                        <div class="button__text">
+                            <i class="fa fa-play pr-3"></i>
+                            <span>PLAY TRAILER</span> 
+                        </div>
+
+                    </button>
+                    
+                </div>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="./img/hero-3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel__bg"></div>
+                <div class="container carousel-caption
+                p-0 text-left">
+                    <h5>ACTION, ADVENTURE, FANTASY</h5>
+                    <h3>End of the World: Part II</h3>
+                    <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum.</p>
+                    <span class="rated">PG</span>
+                    <button>
+                        <div class="button__overlay">   
+                        </div>
+                        <div class="button__text">
+                            <i class="fa fa-play pr-3"></i>
+                            <span>PLAY TRAILER</span> 
+                        </div>
+
+                    </button>
+                    
+                </div>
+              </div>
+            </div>
+            
+          </div>
+    </section>
     <section class="newIn"></section>
     <section class="showTime"></section>
     <section class="comingSoon"></section>
