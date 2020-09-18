@@ -112,10 +112,10 @@ header{
 
 .carousel-caption{
     /* position: absolute; */
-    justify-content: flex-start;
-    left: 10%;
-    top: 35%;
-    /* transform: translateX(-50%); */
+    /* justify-content: flex-start; */
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
     width: 60%;
     
 }
@@ -224,3 +224,370 @@ header{
     z-index: 2;
 }
 
+/* NEWIN */
+
+.newIn h4{
+    border-bottom: 1px solid silver;
+    padding: 0;
+    color: #ec7532;
+}
+
+.newIn h4::after{
+    content: '';
+    width: 140px;
+    height: 3px;
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    display: block;
+    margin-top: 15px;
+    
+}
+
+.newIn__img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.newIn__img img{
+    width: 100%;
+    display: block;
+}
+
+.newIn__overlay{
+    position: absolute;
+    top: 0;
+    width: 230%;
+    height: 100%;
+    
+    /* text-align: center; */
+    background: linear-gradient(to bottom,#fbbd61,#ec7532 );
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    transform: skew(45deg) translateX(-128%);
+    
+    transition: all .25s;
+    
+}
+
+.newIn__img:hover .newIn__overlay{
+    transform: skew(45deg) translateX(-28%);
+    opacity: 0.9;
+}
+
+.newIn__overlay__text{
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    /* transform: translate(-50%, -50%); */
+    transform: scale(0.8);
+    color: white;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: .25s;
+}
+
+.newIn__img:hover .newIn__overlay__text{
+    transform: scale(1);
+    opacity: 1;
+    /* transform: translate(-50%, -50%); */
+}
+
+.newIn__overlay__text i{
+    padding: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.newIn__overlay__text h5{
+    font-size: .9em;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.newIn__movie{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fa-star{
+    color: #fbbd61;
+}
+
+.newIn__movie i.grey{
+    color: #d8d8d8;
+}
+
+/* SHOWTIME */
+
+#myTab .nav-link {
+    color: black;
+    font-size: 1.4em;
+    width: 68px;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#myTab .nav-link.active{
+    border: none;
+    color: #ec7532;
+} 
+
+#myTab .nav-link::after {
+    content:'';
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #fbbd61,#ec7532);
+    display: block;
+    box-shadow: 0 0 20px 0 #fbbd61;
+    transition: all .5s;
+}
+
+#myTab .nav-link:hover{
+    border: none;
+}
+
+#myTab .nav-link.active::after{
+    width: 100%;
+}
+
+#myTab .nav-link:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+#myTabContent .showTime__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#myTabContent .showTime__content h4{
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #ec7532;
+    margin-top: 15px;
+}
+#myTabContent .showTime__content h5{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+#myTabContent .showTime__content>p, #myTabContent .showTime__content .col-3 span{
+    color: #717171;
+}
+
+#myTabContent .showTime__content a, .comingSoon__left a{
+    text-decoration: none;
+    color: #ec7532;
+    transition: .5s;
+    letter-spacing: 4px;
+    font-size: .8em;
+}
+
+#myTabContent .showTime__content a:hover{
+    color: black;
+}
+
+#myTabContent .showTime__content .col-md-9 span{
+    font-size: .75em;
+    letter-spacing: 4px;
+}
+
+#myTabContent .showTime__content .col-md-3{
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+#myTabContent .showTime__content .col-md-3 .showTime__movieRated {
+    color: white;
+    font-weight: 600;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* COMING SOON */
+
+.comingSoon{
+    background:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(../img/slide-3.png);
+    background-size: cover;
+
+}
+
+.comingSoon__content h4{
+    border-bottom: 1px solid silver;
+    padding: 0;
+    
+}
+
+.comingSoon__content h4::after{
+    content: '';
+    width: 140px;
+    height: 3px;
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+    display: block;
+    margin-top: 17px;
+}
+
+.comingSoon__left h5{
+    color: #ec7532;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.comingSoon__left h3{
+    font-size: 2.8em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.fa-calendar-alt, .comingSoon__left span {
+    opacity: 0.75;
+    margin-bottom: 30px;
+}
+
+.comingSoon__left p{
+    font-size: 1.3em;
+}
+
+
+.comingSoon__right img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.icon-play{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-play i{
+    padding: 30px;
+    border: 2px solid #ec7532;
+    border-radius: 50%;
+    transition: .5s;
+    font-size: 1.5em;
+    transform: scale(1);
+}
+
+.comingSoon__right:hover .icon-play i {
+    transform: scale(.9);
+}
+
+.comingSoon__carousel{
+    background-color: #000;
+}
+
+.comingSoon__movie img{
+    width: 100%;
+}
+
+.comingSoon__movie p:first-of-type{
+    font-size: 1.2em;
+    margin-top: 25px;
+}
+
+.comingSoon__movie p:last-of-type{
+    opacity: .5;
+}
+
+.comingSoon__movie{
+    opacity: .45;
+    transition: .75s;
+}
+
+.comingSoon__movie.active{
+    opacity: 1;
+}
+
+.comingSoon__movie:hover{
+    opacity: 1;
+}
+
+/* CONTACT */
+
+.contact p {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #4a4a4a;
+    letter-spacing: 1px;
+}
+
+.contact h3{
+    font-size: 3.1em;
+    color: #ec7532;
+}
+
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    background-color: #000000;
+}
+
+.footer__item h6{
+    color: #ec7532;
+    padding: 15px 0;
+} 
+
+.footer__item li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+footer a{
+    font-size: .9em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    transition: .5s;
+}
+
+footer p{
+    border-top: 1px solid rgba(192, 192, 192, .2);
+    padding-top: 25px;
+}
+
+footer a:hover{
+    color: #fbbd61;
+    text-decoration: none;
+    
+}
+
+.footer__item a:hover i{
+    opacity: 1;
+}
+
+.footer__item li i{
+    width: 30px;
+    opacity: .5;
+}
